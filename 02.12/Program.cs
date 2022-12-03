@@ -16,8 +16,13 @@ namespace _02._12
             using (FileStream fs = new FileStream("response.json", FileMode.OpenOrCreate))
             {
                 Weather weather = await JsonSerializer.DeserializeAsync<Weather>(fs);
-                Console.WriteLine($"Name: {weather?.season} Age: {weather?.temp}");
+                Console.WriteLine($"Погода за {weather.now} - {weather.season}:");
+                Console.WriteLine($"Температура: {weather.temp}, ощущается как: {weather.feels_like}");
+                Console.WriteLine($"Осадки: {weather.condition}");
+                Console.WriteLine($"Информация о месте: {weather.info.tzinfo.name} - ({weather.info.lat}; {weather.info.lon})");
             }
+            // Нужно чтобы не закрывать программу после вывода данных
+            Console.ReadLine();
         }
     }
 
