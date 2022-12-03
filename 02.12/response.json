@@ -1,0 +1,16 @@
+{
+	"now": "2022-12-02T15:12:38",
+	"info": {
+		"lat": 55.801005,
+		"lon": 38.978538,
+		"tzinfo" : {
+			"name": "Europe/Moscow",
+			"abbr": "MSK",
+			"dst": false
+		}
+	},
+	"temp": -12,
+	"feels_like": -17,
+	"condition": "overcast",
+	"season": "winter"
+}
